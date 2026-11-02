@@ -558,6 +558,12 @@ select:focus {
   line-height: 1.4;
 }
 
+.link-container {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Garante que o link ocupe a largura disponível */
+}
+
 /* ==========================================================================
    PÁGINA: REGISTRO
    ========================================================================== */

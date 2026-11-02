@@ -48,23 +48,14 @@ body.theme-discente {
   background-color: #115e59;
 }
 
-/* Container do Painel */
-.portal-container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 30px auto;
-  background-color: var(--surface-card);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-light);
-  overflow: hidden;
-}
-
 /* Topbar do Portal */
 .portal-header {
   background-color: var(--portal-color);
   color: var(--text-white);
-  padding: 16px 24px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .portal-header h1 {
@@ -75,7 +66,7 @@ body.theme-discente {
 /* Estrutura Interna */
 .portal-layout {
   display: flex;
-  min-height: 520px;
+  min-height: 600px;
 }
 
 /* Barra Lateral (Desktop) */
@@ -85,7 +76,7 @@ body.theme-discente {
   border-right: 1px solid var(--border-light);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   flex-shrink: 0;
 }
 
@@ -96,7 +87,7 @@ body.theme-discente {
   padding: 10px 14px;
   border-radius: var(--radius-sm);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-muted);
   transition: all 0.2s ease;
@@ -142,14 +133,14 @@ body.theme-discente .portal-nav-item.active {
 }
 
 .portal-welcome-name {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--portal-color);
   margin-bottom: 4px;
 }
 
 .portal-welcome-sub {
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--portal-subtext);
 }
@@ -170,6 +161,7 @@ body.theme-discente .portal-nav-item.active {
   flex-direction: column;
   justify-content: space-between;
   min-height: 140px;
+  width: fit-content;
   box-shadow: var(--shadow-sm);
   transition:
     transform 0.15s ease,
@@ -202,17 +194,17 @@ body.theme-discente .portal-nav-item.active {
 }
 
 .portal-card-header h2 {
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-title);
   margin-bottom: 6px;
 }
 
 .portal-card-desc {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   line-height: 1.45;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 /* Utilitários de texto Desktop / Mobile */
