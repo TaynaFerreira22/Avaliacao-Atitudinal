@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevWeb — Acesso ao Sistema</title>
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body>
+
+    <!-- Topbar Desktop: Botão de voltar no canto esquerdo -->
+    <header class="header-desktop">
+        <a href="index.html" onclick="history.back(); return false;" class="btn-voltar">
+            ←
+        </a>
+        <a href="index.html" class="header-brand">🎓 DevWeb — Acesso ao Sistema</a>
+    </header>
+
+    <!-- Topbar Mobile com botão de retornar -->
+    <header class="header-mobile">
+        <a href="index.html" onclick="history.back(); return false;" class="btn-voltar-mobile">←</a>
+        <div class="header-mobile-title">Acessar Conta</div>
+        <div style="width: 50px;"></div> <!-- Espaçador para balancear alinhamento -->
+    </header>
+
+    <main class="container">
+        <div class="login-grid">
+
+            <!-- Formulário de Credenciais -->
+            <section class="card">
+                <div class="card-header">
+                    <h2>Identificação do Usuário</h2>
+                    <p>Insira suas credenciais institucionais</p>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="identificador">E-mail Institucional ou CPF:</label>
+                        <input type="text" id="identificador" name="identificador" placeholder="E-mail ou CPF...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha de Acesso:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Sua senha de acesso...">
+                    </div>
+
+                    <button type="submit" class="btn btn-green btn-block desktop-login-btn">Autenticar e Entrar</button>
+
+                    <a href="#" class="forgot-link">Esqueceu sua senha? Clique aqui para recuperar</a>
+                </form>
+            </section>
+
+            <!-- Seleção de Portais -->
+            <section>
+                <div class="card-header desktop-only">
+                    <h2>Selecione seu Perfil de Acesso</h2>
+                    <p>Escolha o portal correspondente à sua função:</p>
+                </div>
+
+                <span class="portal-section-label">Selecione seu Portal:</span>
+
+                <div class="portal-list">
+                    <div class="portal-option docente">
+                        <h4>Portal do Docente</h4>
+                        <p>Acesso de professores, observações por aluno e registro de evidências.</p>
+                    </div>
+
+
+                    <div class="portal-option coordenacao">
+                        <h4>Portal da Coordenação</h4>
+                        <p>Painel de clima escolar, gestão analítica e alertas precoces.</p>
+                    </div>
+
+                    <div class="portal-option discente">
+                        <h4>Portal do Discente</h4>
+                        <p>Autoavaliação formativa e progresso contínuo do aluno.</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-green btn-block mobile-login-btn">Entrar</button>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

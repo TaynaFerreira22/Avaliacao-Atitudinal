@@ -1,0 +1,307 @@
+/* ==========================================================================
+   PORTAIS / DASHBOARDS (DOCENTE, COORDENAÇÃO, DISCENTE)
+   ========================================================================== */
+
+/* Cores de Tema por Portal */
+body.theme-docente {
+  --portal-color: #1e3a8a;
+  --portal-light-bg: #eff6ff;
+  --portal-light-border: #bfdbfe;
+  --portal-subtext: #2563eb;
+}
+
+body.theme-coordenacao {
+  --portal-color: #0f766e;
+  --portal-light-bg: #f0fdfa;
+  --portal-light-border: #99f6e4;
+  --portal-subtext: #0d9488;
+}
+
+body.theme-discente {
+  --portal-color: #4c1d95;
+  --portal-light-bg: #faf5ff;
+  --portal-light-border: #ddd6fe;
+  --portal-subtext: #6d28d9;
+}
+
+/* Cor extra para botões/bordas de autoavaliação e alerta */
+:root {
+  --color-orange: #d97706;
+  --color-orange-hover: #b45309;
+}
+
+.btn-orange {
+  background-color: var(--color-orange);
+  color: var(--text-white);
+}
+
+.btn-orange:hover {
+  background-color: var(--color-orange-hover);
+}
+
+.btn-teal {
+  background-color: #0f766e;
+  color: var(--text-white);
+}
+
+.btn-teal:hover {
+  background-color: #115e59;
+}
+
+/* Container do Painel */
+.portal-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  background-color: var(--surface-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+/* Topbar do Portal */
+.portal-header {
+  background-color: var(--portal-color);
+  color: var(--text-white);
+  padding: 16px 24px;
+}
+
+.portal-header h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+/* Estrutura Interna */
+.portal-layout {
+  display: flex;
+  min-height: 520px;
+}
+
+/* Barra Lateral (Desktop) */
+.portal-sidebar {
+  width: 240px;
+  padding: 24px 16px;
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.portal-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.portal-nav-item:hover {
+  background-color: var(--bg-page);
+  color: var(--text-title);
+}
+
+.portal-nav-item.active {
+  background-color: var(--portal-color);
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+/* Variação visual para menus ativos com fundo suave (Coordenação e Discente) */
+body.theme-coordenacao .portal-nav-item.active {
+  background-color: #ccfbf1;
+  color: #0f766e;
+}
+
+body.theme-discente .portal-nav-item.active {
+  background-color: #f3e8ff;
+  color: #4c1d95;
+}
+
+/* Área de Conteúdo */
+.portal-content {
+  flex: 1;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card de Boas-Vindas */
+.portal-welcome {
+  background-color: var(--portal-light-bg);
+  border: 1px solid var(--portal-light-border);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+
+.portal-welcome-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--portal-color);
+  margin-bottom: 4px;
+}
+
+.portal-welcome-sub {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--portal-subtext);
+}
+
+/* Grid de Cards de Ação */
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.portal-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.portal-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Bordas coloridas laterais */
+.portal-card.border-green {
+  border-left: 5px solid #10b981;
+}
+
+.portal-card.border-blue {
+  border-left: 5px solid var(--primary-blue);
+}
+
+.portal-card.border-purple {
+  border-left: 5px solid var(--primary-purple);
+}
+
+.portal-card.border-orange {
+  border-left: 5px solid var(--color-orange);
+}
+
+.portal-card.border-teal {
+  border-left: 5px solid #0f766e;
+}
+
+.portal-card-header h2 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-title);
+  margin-bottom: 6px;
+}
+
+.portal-card-desc {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Utilitários de texto Desktop / Mobile */
+.txt-mobile {
+  display: none;
+}
+.txt-desktop {
+  display: inline;
+}
+
+/* ==========================================================================
+   ADAPTAÇÕES MOBILE ESPECÍFICAS PARA OS PORTAIS (< 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  body {
+    background-color: var(--surface-card);
+  }
+
+  .portal-container {
+    max-width: 480px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 100vh;
+  }
+
+  .portal-header {
+    padding: 18px 20px;
+  }
+
+  /* Oculta o menu lateral no mobile conforme wireframe */
+  .portal-sidebar {
+    display: none;
+  }
+
+  .portal-content {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  /* Alterna textos completos para versões enxutas */
+  .txt-desktop {
+    display: none;
+  }
+  .txt-mobile {
+    display: inline;
+  }
+
+  .portal-welcome {
+    padding: 14px 16px;
+  }
+
+  .portal-welcome-name {
+    font-size: 0.98rem;
+  }
+
+  .portal-welcome-sub {
+    font-size: 0.82rem;
+  }
+
+  /* Grid vira coluna única de itens compactos */
+  .portal-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .portal-card {
+    min-height: auto;
+    padding: 14px 16px;
+    cursor: pointer;
+  }
+
+  .portal-card:active {
+    background-color: var(--bg-page);
+  }
+
+  .portal-card-header h2 {
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+  }
+
+  .portal-card-desc {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+
+  /* Oculta os botões internos nos cards no mobile */
+  .portal-card .btn {
+    display: none;
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevWeb — Cadastro de Usuário</title>
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body>
+    <!-- Topbar Desktop: Botão de voltar no canto esquerdo -->
+    <header class="header-desktop">
+        <a href="index.html" onclick="history.back(); return false;" class="btn-voltar">
+            ←
+        </a>
+        <a href="index.html" class="header-brand">🎓 DevWeb — Acesso ao Sistema</a>
+    </header>
+
+    <!-- Topbar Mobile com botão de retornar -->
+    <header class="header-mobile">
+        <a href="index.html" onclick="history.back(); return false;" class="btn-voltar-mobile">←</a>
+        <div class="header-mobile-title">Criar Nova Conta</div>
+        <div style="width: 50px;"></div> <!-- Espaçador para balancear alinhamento -->
+    </header>
+
+    <main class="container">
+        <div class="register-wrapper">
+            <section class="card">
+                <div class="card-header">
+                    <h2>Criar Conta no Sistema</h2>
+                    <p class="register-header-desc">Preencha os dados abaixo para vincular seu perfil à instituição</p>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="register-grid">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail Institucional:</label>
+                            <input type="email" id="email" name="email" placeholder="seu.nome@escola.edu.br">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="documento">CPF ou Matrícula:</label>
+                            <input type="text" id="documento" name="documento" placeholder="000.000.000-00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="perfil">Perfil de Acesso Solicitado:</label>
+                            <select id="perfil" name="perfil">
+                                <option value="docente">Docente / Professor</option>
+                                <option value="coordenacao">Coordenação Pedagógica</option>
+                                <option value="discente">Discente / Aluno</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha-cad">Senha de Acesso:</label>
+                            <input type="password" id="senha-cad" name="senha" placeholder="Crie uma senha segura...">
+                        </div>
+
+                        <div class="form-group register-field-confirm">
+                            <label for="confirmar-senha">Confirmar Senha:</label>
+                            <input type="password" id="confirmar-senha" name="confirmar_senha"
+                                placeholder="Repita sua senha">
+                        </div>
+                    </div>
+
+                    <div class="form-terms">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <label for="termos">Concordo com os termos de uso e políticas de privacidade pedagógica da
+                            escola.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-purple btn-block">Concluir e Criar Conta</button>
+
+                    <a href="entrar.html" class="register-footer-link">Já possui uma conta? Faça login aqui</a>
+                </form>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>
