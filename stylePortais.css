@@ -298,3 +298,280 @@ body.theme-discente .portal-nav-item.active {
     display: none;
   }
 }
+
+/* ==========================================================================
+   DISCENTE — DASHBOARD E CHAT
+   ========================================================================== */
+body.theme-discente .portal-sidebar {
+  background-color: var(--surface-card);
+}
+
+.portal-user {
+  margin-left: auto;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* Cores utilitárias (alimentam a variável --c) */
+.c-purple { --c: var(--primary-purple); }
+.c-green { --c: var(--primary-green); }
+.c-blue { --c: var(--primary-blue); }
+.c-orange { --c: var(--color-orange); }
+
+/* Grades de colunas */
+.cols {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: var(--cols);
+}
+
+.cols-3 { --cols: repeat(3, 1fr); }
+.cols-21 { --cols: 2fr 1fr; }
+.cols-chat { --cols: 1.6fr 1fr; }
+
+/* Caixa genérica */
+.box {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+
+.box h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-title);
+  margin-bottom: 14px;
+}
+
+/* Indicadores */
+.stat {
+  border-left: 4px solid var(--c);
+}
+
+.stat small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.stat strong {
+  font-size: 1.1rem;
+  color: var(--c);
+}
+
+/* Gráfico */
+.chart text {
+  fill: var(--text-muted);
+  font-size: 12px;
+}
+
+/* Matriz de competências */
+.skill {
+  margin-bottom: 16px;
+}
+
+.skill span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.skill-bar {
+  height: 12px;
+  border-radius: var(--radius-pill);
+  background-color: var(--border-light);
+  overflow: hidden;
+}
+
+.skill-bar div {
+  height: 100%;
+  background-color: var(--c);
+}
+
+/* Devolutivas */
+.feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-top: 10px;
+}
+
+.feedback b {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-title);
+}
+
+.feedback p,
+.feedback time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.feedback time {
+  white-space: nowrap;
+}
+
+/* Chat */
+.chat {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: 520px;
+}
+
+.chat h2 {
+  padding: 16px 20px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.chat-msgs {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.msg {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background-color: #f1f5f9;
+  font-size: 0.8rem;
+}
+
+.msg b {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-title);
+  margin-bottom: 4px;
+}
+
+.msg.me {
+  align-self: flex-end;
+  background-color: var(--primary-purple);
+  color: var(--text-white);
+}
+
+.msg.me b {
+  color: var(--text-white);
+}
+
+.chat-input {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+}
+
+.chat-input .btn {
+  padding: 0 24px;
+  white-space: nowrap;
+}
+
+/* Contexto da avaliação */
+.ctx {
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.ctx p {
+  margin-bottom: 8px;
+}
+
+.ctx p:last-child {
+  margin-bottom: 0;
+}
+
+.ctx b {
+  color: var(--text-title);
+}
+
+.ctx strong {
+  display: block;
+  color: var(--primary-purple);
+}
+
+.ctx.lilac {
+  background-color: var(--primary-purple-light);
+  border-color: var(--primary-purple-border);
+}
+
+@media (max-width: 768px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-user {
+    display: none;
+  }
+
+  .msg {
+    max-width: 90%;
+  }
+}
+
+/* Histórico e Autoavaliação */
+.filters {
+  display: flex;
+  gap: 12px;
+}
+
+.feedback.active {
+  background-color: var(--primary-purple-light);
+  border-color: var(--primary-purple-border);
+}
+
+.q {
+  margin-bottom: 18px;
+}
+
+.q span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-title);
+  margin-bottom: 8px;
+}
+
+.opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.opts label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.opts input {
+  accent-color: var(--primary-green);
+}
+
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-title);
+  resize: vertical;
+}

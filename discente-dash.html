@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Discente — Dashboard Formativo</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-discente">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="index.html" onclick="history.back(); return false;" class="btn-voltar">
+                🠔
+            </a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Portal do Discente</span>
+                <span class="txt-mobile">Portal do Discente</span>
+            </h1>
+            <span class="portal-user">Ana Clara Mendes (3º Ano A)</span>
+        </header>
+
+        <div class="portal-layout">
+            <!-- Navegação Lateral (Desktop) -->
+            <aside class="portal-sidebar">
+                <a href="discente-dash.html" class="portal-nav-item active">
+                    <span>📊</span> Dashboard Formativo
+                </a>
+                <a href="discente-autoavaliacao.html" class="portal-nav-item">
+                    <span>✍️</span> Autoavaliação (Ciclos)
+                </a>
+                <a href="discente-historico.html" class="portal-nav-item">
+                    <span>📄</span> Histórico & Feedback
+                </a>
+                <a href="discente-chat.html" class="portal-nav-item">
+                    <span>💬</span> Discutir Avaliação
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <!-- Indicadores -->
+                <section class="cols cols-3">
+                    <div class="box stat c-purple">
+                        <small>Média Formativa Geral</small>
+                        <strong>8.8 / 10</strong>
+                    </div>
+                    <div class="box stat c-green">
+                        <small>Autoavaliações Concluídas</small>
+                        <strong>4 de 4 Ciclos</strong>
+                    </div>
+                    <div class="box stat c-blue">
+                        <small>Status de Orientação</small>
+                        <strong>Desempenho Exemplar</strong>
+                    </div>
+                </section>
+
+                <!-- Gráfico e Competências -->
+                <section class="cols cols-21">
+                    <div class="box chart">
+                        <h2>Evolução Socioemocional e Acadêmica (Por Bimestre)</h2>
+                        <svg viewBox="0 0 630 350">
+                            <polyline points="53,298 177,215 301,243 425,160 549,133" fill="none" stroke="#7c3aed"
+                                stroke-width="4" />
+                            <line x1="53" y1="313" x2="549" y2="173" stroke="#059669" stroke-width="3"
+                                stroke-dasharray="3 6" />
+                            <g fill="#7c3aed">
+                                <circle cx="53" cy="298" r="6" />
+                                <circle cx="177" cy="215" r="6" />
+                                <circle cx="301" cy="243" r="6" />
+                                <circle cx="425" cy="160" r="6" />
+                                <circle cx="549" cy="133" r="8" />
+                            </g>
+                            <text x="53" y="337" text-anchor="middle">Bim 1</text>
+                            <text x="177" y="337" text-anchor="middle">Bim 2</text>
+                            <text x="301" y="337" text-anchor="middle">Bim 3</text>
+                            <text x="425" y="337" text-anchor="middle">Bim 4</text>
+                        </svg>
+                    </div>
+
+                    <div class="box">
+                        <h2>Matriz de Competências</h2>
+                        <div class="skill c-purple">
+                            <span>Autonomia & Organização</span>
+                            <div class="skill-bar"><div style="width: 86%"></div></div>
+                        </div>
+                        <div class="skill c-green">
+                            <span>Trabalho Colaborativo</span>
+                            <div class="skill-bar"><div style="width: 94%"></div></div>
+                        </div>
+                        <div class="skill c-blue">
+                            <span>Pensamento Crítico & Lógica</span>
+                            <div class="skill-bar"><div style="width: 77%"></div></div>
+                        </div>
+                        <div class="skill c-orange">
+                            <span>Comunicação & Argumentação</span>
+                            <div class="skill-bar"><div style="width: 84%"></div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Devolutivas -->
+                <section class="box">
+                    <h2>Devolutivas Pedagógicas Recentes dos Professores</h2>
+                    <div class="feedback">
+                        <div>
+                            <b>Prof. Ricardo Santos — Matemática</b>
+                            <p>"Demonstrou excelente autonomia no projeto de análise de dados. Recomendada para tutoria
+                                da turma."</p>
+                        </div>
+                        <time>Ontem, 14:30</time>
+                    </div>
+                    <div class="feedback">
+                        <div>
+                            <b>Coordenação Pedagógica — Clima Escolar</b>
+                            <p>"Participação destacada no conselho jovem e mediação de conflitos socioemocionais."</p>
+                        </div>
+                        <time>28/Outubro</time>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

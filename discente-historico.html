@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Discente — Histórico & Feedback</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-discente">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="index.html" onclick="history.back(); return false;" class="btn-voltar">
+                🠔
+            </a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Histórico & Feedback</span>
+                <span class="txt-mobile">Histórico & Feedback</span>
+            </h1>
+            <span class="portal-user">Ana Clara Mendes (3º Ano A)</span>
+        </header>
+
+        <div class="portal-layout">
+            <!-- Navegação Lateral (Desktop) -->
+            <aside class="portal-sidebar">
+                <a href="discente-dash.html" class="portal-nav-item">
+                    <span>📊</span> Dashboard Formativo
+                </a>
+                <a href="discente-autoavaliacao.html" class="portal-nav-item">
+                    <span>✍️</span> Autoavaliação (Ciclos)
+                </a>
+                <a href="discente-historico.html" class="portal-nav-item active">
+                    <span>📄</span> Histórico & Feedback
+                </a>
+                <a href="discente-chat.html" class="portal-nav-item">
+                    <span>💬</span> Discutir Avaliação
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <!-- Indicadores -->
+                <section class="cols cols-3">
+                    <div class="box stat c-purple">
+                        <small>Pareceres Recebidos</small>
+                        <strong>12 no Semestre</strong>
+                    </div>
+                    <div class="box stat c-green">
+                        <small>Nota Atitudinal Média</small>
+                        <strong>8.8 / 10</strong>
+                    </div>
+                    <div class="box stat c-blue">
+                        <small>Último Parecer</small>
+                        <strong>Ontem, 14:30</strong>
+                    </div>
+                </section>
+
+                <section class="cols cols-21">
+                    <!-- Linha do tempo -->
+                    <div class="box">
+                        <h2>Pareceres dos Professores</h2>
+                        <div class="filters">
+                            <select>
+                                <option>Todo o semestre</option>
+                                <option>Últimos 30 dias</option>
+                            </select>
+                            <select>
+                                <option>Todos os professores</option>
+                                <option>Prof. Ricardo Santos</option>
+                                <option>Coordenação Pedagógica</option>
+                            </select>
+                        </div>
+                        <div class="feedback">
+                            <div>
+                                <b>Prof. Ricardo Santos — Matemática</b>
+                                <p>"Demonstrou excelente autonomia no projeto de análise de dados. Recomendada para
+                                    tutoria da turma."</p>
+                            </div>
+                            <time>Ontem, 14:30</time>
+                        </div>
+                        <div class="feedback">
+                            <div>
+                                <b>Coordenação Pedagógica — Clima Escolar</b>
+                                <p>"Participação destacada no conselho jovem e mediação de conflitos
+                                    socioemocionais."</p>
+                            </div>
+                            <time>28/Outubro</time>
+                        </div>
+                        <div class="feedback">
+                            <div>
+                                <b>Profa. Marina Costa — Língua Portuguesa</b>
+                                <p>"Argumentação clara e bem fundamentada na produção textual do bimestre."</p>
+                            </div>
+                            <time>21/Outubro</time>
+                        </div>
+                        <div class="feedback">
+                            <div>
+                                <b>Prof. Henrique Alves — Física</b>
+                                <p>"Bom trabalho em grupo no laboratório; atenção aos prazos dos relatórios."</p>
+                            </div>
+                            <time>09/Outubro</time>
+                        </div>
+                    </div>
+
+                    <!-- Resumo -->
+                    <aside class="box">
+                        <h2>Resumo do Semestre</h2>
+                        <div class="ctx lilac">
+                            <p><strong>Pontos Fortes:</strong>Autonomia e trabalho colaborativo</p>
+                            <p><strong>Ponto de Atenção:</strong>Prazos de entrega dos relatórios</p>
+                            <p><strong>Meta Sugerida:</strong>Atuar como tutora da turma</p>
+                        </div>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
