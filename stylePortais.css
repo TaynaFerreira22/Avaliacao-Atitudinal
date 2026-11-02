@@ -49,6 +49,7 @@ body.theme-discente {
 }
 
 /* Topbar do Portal */
+
 .portal-header {
   background-color: var(--portal-color);
   color: var(--text-white);
