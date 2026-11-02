@@ -1,2 +1,0 @@
-hellomake:
-	@echo "jus testin"

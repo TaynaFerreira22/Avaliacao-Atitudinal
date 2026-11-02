@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Discente — Autoavaliação (Ciclos)</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-discente">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="index.html" onclick="history.back(); return false;" class="btn-voltar">
+                🠔
+            </a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Autoavaliação (Ciclos)</span>
+                <span class="txt-mobile">Autoavaliação</span>
+            </h1>
+            <span class="portal-user">Ana Clara Mendes (3º Ano A)</span>
+        </header>
+
+        <div class="portal-layout">
+            <!-- Navegação Lateral (Desktop) -->
+            <aside class="portal-sidebar">
+                <a href="discente-dash.html" class="portal-nav-item">
+                    <span>📊</span> Dashboard Formativo
+                </a>
+                <a href="discente-autoavaliacao.html" class="portal-nav-item active">
+                    <span>✍️</span> Autoavaliação (Ciclos)
+                </a>
+                <a href="discente-historico.html" class="portal-nav-item">
+                    <span>📄</span> Histórico & Feedback
+                </a>
+                <a href="discente-chat.html" class="portal-nav-item">
+                    <span>💬</span> Discutir Avaliação
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <section class="cols cols-21">
+                    <!-- Questionário -->
+                    <div class="box">
+                        <h2>Autoavaliação — Ciclo 2 (2º Trimestre)</h2>
+
+                        <div class="q">
+                            <span>Engajamento em Sala:</span>
+                            <div class="opts">
+                                <label><input type="radio" name="engajamento"> Insuficiente</label>
+                                <label><input type="radio" name="engajamento"> Regular</label>
+                                <label><input type="radio" name="engajamento"> Bom</label>
+                                <label><input type="radio" name="engajamento" checked> Excelente</label>
+                            </div>
+                        </div>
+
+                        <div class="q">
+                            <span>Gestão de Tempo:</span>
+                            <div class="opts">
+                                <label><input type="radio" name="tempo"> Entrego poucos prazos</label>
+                                <label><input type="radio" name="tempo" checked> Entrego a maioria dos prazos</label>
+                                <label><input type="radio" name="tempo"> Entrego todos os prazos</label>
+                            </div>
+                        </div>
+
+                        <div class="q">
+                            <span>Colaboração com os Colegas:</span>
+                            <div class="opts">
+                                <label><input type="radio" name="colaboracao"> Raramente</label>
+                                <label><input type="radio" name="colaboracao"> Às vezes</label>
+                                <label><input type="radio" name="colaboracao" checked> Frequentemente</label>
+                                <label><input type="radio" name="colaboracao"> Sempre</label>
+                            </div>
+                        </div>
+
+                        <div class="q">
+                            <span>Meta Pessoal para o Próximo Ciclo:</span>
+                            <textarea rows="3">Revisar fórmulas de média ponderada semanalmente</textarea>
+                        </div>
+
+                        <button class="btn btn-green">Salvar Autoavaliação</button>
+                    </div>
+
+                    <!-- Ciclos -->
+                    <aside class="box">
+                        <h2>Ciclos Letivos</h2>
+                        <div class="feedback">
+                            <div>
+                                <b>Ciclo 1</b>
+                                <p>1º Trimestre · Média 8.1</p>
+                            </div>
+                            <time>Concluído</time>
+                        </div>
+                        <div class="feedback active">
+                            <div>
+                                <b>Ciclo 2</b>
+                                <p>2º Trimestre · Média 8.5</p>
+                            </div>
+                            <time>Concluído</time>
+                        </div>
+                        <div class="feedback">
+                            <div>
+                                <b>Ciclo 3</b>
+                                <p>3º Trimestre · Média 8.9</p>
+                            </div>
+                            <time>Concluído</time>
+                        </div>
+                        <div class="feedback">
+                            <div>
+                                <b>Ciclo 4</b>
+                                <p>Recuperação Final · Média 9.0</p>
+                            </div>
+                            <time>Concluído</time>
+                        </div>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
