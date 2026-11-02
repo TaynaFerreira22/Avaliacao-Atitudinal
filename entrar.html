@@ -2,57 +2,58 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevWeb — Acesso ao Sistema</title>
     <link rel="stylesheet" href="styleHome.css">
+    <style>
+        /* Ajuste para alinhar o seletor com o texto do portal */
+        .portal-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .portal-option input[type="radio"] {
+            margin-top: 3px;
+            accent-color: var(--primary-green);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        /* Destaque visual ao selecionar o card */
+        .portal-option:has(input:checked) {
+            outline: 2px solid var(--text-title);
+            transform: translateX(4px);
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Topbar Desktop: Botão de voltar no canto esquerdo -->
+    <!-- Topbar Desktop -->
     <header class="header-desktop">
         <a href="index.html" onclick="history.back(); return false;" class="btn-voltar">
-            ←
+            🠔
         </a>
         <a href="index.html" class="header-brand">🎓 DevWeb — Acesso ao Sistema</a>
     </header>
 
-    <!-- Topbar Mobile com botão de retornar -->
+    <!-- Topbar Mobile -->
     <header class="header-mobile">
         <a href="index.html" onclick="history.back(); return false;" class="btn-voltar-mobile">←</a>
         <div class="header-mobile-title">Acessar Conta</div>
-        <div style="width: 50px;"></div> <!-- Espaçador para balancear alinhamento -->
+        <div style="width: 50px;"></div>
     </header>
 
     <main class="container">
         <div class="login-grid">
 
-            <!-- Formulário de Credenciais -->
-            <section class="card">
-                <div class="card-header">
-                    <h2>Identificação do Usuário</h2>
-                    <p>Insira suas credenciais institucionais</p>
-                </div>
-
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="identificador">E-mail Institucional ou CPF:</label>
-                        <input type="text" id="identificador" name="identificador" placeholder="E-mail ou CPF...">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="senha">Senha de Acesso:</label>
-                        <input type="password" id="senha" name="senha" placeholder="Sua senha de acesso...">
-                    </div>
-
-                    <button type="submit" class="btn btn-green btn-block desktop-login-btn">Autenticar e Entrar</button>
-
-                    <a href="#" class="forgot-link">Esqueceu sua senha? Clique aqui para recuperar</a>
-                </form>
-            </section>
-
-            <!-- Seleção de Portais -->
+            <!-- Seleção Obrigatória de Portais -->
             <section>
                 <div class="card-header desktop-only">
                     <h2>Selecione seu Perfil de Acesso</h2>
@@ -62,28 +63,78 @@
                 <span class="portal-section-label">Selecione seu Portal:</span>
 
                 <div class="portal-list">
-                    <div class="portal-option docente">
-                        <h4>Portal do Docente</h4>
-                        <p>Acesso de professores, observações por aluno e registro de evidências.</p>
-                    </div>
+                    <label class="portal-option docente">
+                        <input type="radio" name="portal" value="docente.html" form="form-login" required>
+                        <div class="portal-info">
+                            <h4>Portal do Docente</h4>
+                            <p>Acesso de professores, observações por aluno e registro de evidências.</p>
+                        </div>
+                    </label>
 
+                    <label class="portal-option coordenacao">
+                        <input type="radio" name="portal" value="coordenacao.html" form="form-login" required>
+                        <div class="portal-info">
+                            <h4>Portal da Coordenação</h4>
+                            <p>Painel de clima escolar, gestão analítica e alertas precoces.</p>
+                        </div>
+                    </label>
 
-                    <div class="portal-option coordenacao">
-                        <h4>Portal da Coordenação</h4>
-                        <p>Painel de clima escolar, gestão analítica e alertas precoces.</p>
-                    </div>
-
-                    <div class="portal-option discente">
-                        <h4>Portal do Discente</h4>
-                        <p>Autoavaliação formativa e progresso contínuo do aluno.</p>
-                    </div>
+                    <label class="portal-option discente">
+                        <input type="radio" name="portal" value="discente.html" form="form-login" required>
+                        <div class="portal-info">
+                            <h4>Portal do Discente</h4>
+                            <p>Autoavaliação formativa e progresso contínuo do aluno.</p>
+                        </div>
+                    </label>
                 </div>
 
-                <button type="submit" class="btn btn-green btn-block mobile-login-btn">Entrar</button>
+                <button type="submit" form="form-login" class="btn btn-green btn-block mobile-login-btn">Entrar</button>
             </section>
+
+            <!-- Formulário de Credenciais -->
+            <section class="card">
+                <div class="card-header">
+                    <h2>Identificação do Usuário</h2>
+                    <p>Insira suas credenciais institucionais</p>
+                </div>
+
+                <form id="form-login" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="identificador">E-mail Institucional ou CPF:</label>
+                        <input type="text" id="identificador" name="identificador" placeholder="E-mail ou CPF..."
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha de Acesso:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Sua senha de acesso..." required>
+                    </div>
+
+                    <button type="submit" class="btn btn-green btn-block desktop-login-btn">Autenticar e Entrar</button>
+
+                    <a href="#" class="forgot-link">Esqueceu sua senha? Clique aqui para recuperar</a>
+                </form>
+            </section>
+
+
 
         </div>
     </main>
+
+    <!-- Script de roteamento após validação dos campos -->
+    <script>
+        document.getElementById("form-login").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Pega o portal selecionado
+            const portalSelecionado = document.querySelector('input[name="portal"]:checked');
+
+            if (portalSelecionado) {
+                // Redireciona para o arquivo HTML correspondente (docente.html, coordenacao.html ou discente.html)
+                window.location.href = portalSelecionado.value;
+            }
+        });
+    </script>
 
 </body>
 

@@ -1,6 +1,7 @@
 /* ==========================================================================
    RESET & VARIÁVEIS GLOBAIS
    ========================================================================== */
+
 :root {
   --primary-green: #059669;
   --primary-green-hover: #047857;
@@ -556,6 +557,12 @@ select:focus {
   font-size: 0.8rem;
   color: var(--text-body);
   line-height: 1.4;
+}
+
+.link-container {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Garante que o link ocupe a largura disponível */
 }
 
 /* ==========================================================================
