@@ -19,7 +19,7 @@
             </a>
             <h1>
                 <span class="txt-desktop">🎓 DevWeb — Autoavaliação (Ciclos)</span>
-                <span class="txt-mobile">Autoavaliação</span>
+                <span class="txt-mobile">Autoavaliação Formativa</span>
             </h1>
             <span class="portal-user">Ana Clara Mendes (3º Ano A)</span>
         </header>
@@ -43,9 +43,27 @@
 
             <!-- Conteúdo Principal -->
             <main class="portal-content">
+                <!-- Questionário (Mobile) -->
+                <section class="wizard only-mobile">
+                    <b class="step">Passo 2 de 4: Gestão do Tempo</b>
+                    <div class="skill-bar c-purple"><div style="width: 50%"></div></div>
+                    <div class="box">
+                        <h2>Organização e Entrega de Atividades</h2>
+                        <p>Como você avalia seu cumprimento de prazos nas tarefas individuais este mês?</p>
+                    </div>
+                    <label class="opt"><input type="radio" name="prazo" checked> 🟢 Cumpro sempre com tranquilidade</label>
+                    <label class="opt"><input type="radio" name="prazo"> 🟡 Entreguei a maioria no prazo</label>
+                    <label class="opt"><input type="radio" name="prazo"> 🔴 Preciso de auxílio para organizar</label>
+                    <div class="q">
+                        <span>Comentário / Meta Pessoal (Opcional):</span>
+                        <textarea rows="4" placeholder="Descreva o que pode melhorar..."></textarea>
+                    </div>
+                    <button class="btn btn-purple">Próxima Questão →</button>
+                </section>
+
                 <section class="cols cols-21">
                     <!-- Questionário -->
-                    <div class="box">
+                    <div class="box only-desktop">
                         <h2>Autoavaliação — Ciclo 2 (2º Trimestre)</h2>
 
                         <div class="q">
