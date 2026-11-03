@@ -24,8 +24,8 @@
 
 
 
-*ps: a estrutura do projeto me parece impossível de ser implementada sem refatoração total, como deveríamos implementar metade dessas bases sem js? 
+*ps: a estrutura do projeto me parece impossível de ser implementada sem refatoração total, como deveríamos implementar metade dessas bases sem js?* 
 
-*O modelo mobile de discente não tem navegação?
+*O modelo mobile de discente não tem navegação?*
 
-*~lissaLuxx
+*~lissaLuxx*
