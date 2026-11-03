@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal do Docente</title>
+    <title>DevWeb — Portal do Docente</title>
     <link rel="stylesheet" href="stylePortais.css">
     <link rel="stylesheet" href="styleHome.css">
 </head>
@@ -14,97 +13,120 @@
 
     <!-- Cabeçalho -->
     <header class="portal-header">
-        <a href="index.html" onclick="history.back(); return false;" class="btn-voltar">
-            🠔
-        </a>
+        <a href="entrar.html" class="btn-voltar">🠔</a>
         <h1>
-            <span class="txt-desktop">Portal do Docente</span>
+            <span class="txt-desktop">🎓 DevWeb — Portal do Docente</span>
             <span class="txt-mobile">Portal do Docente</span>
         </h1>
+        <span class="portal-user">Prof. Ricardo Santos (Biologia)</span>
     </header>
 
     <div class="portal-layout">
         <!-- Navegação Lateral (Desktop) -->
         <aside class="portal-sidebar">
-            <a href="#" class="portal-nav-item active">
+            <a href="docente.html" class="portal-nav-item active">
                 <span>🏠</span> Painel Principal
             </a>
-            <a href="#" class="portal-nav-item">
+            <a href="docente-registro.html" class="portal-nav-item">
                 <span>📝</span> Registrar Obs.
             </a>
-            <a href="#" class="portal-nav-item">
+            <a href="docente-historico.html" class="portal-nav-item">
                 <span>🔍</span> Consultar Histórico
             </a>
-            <a href="#" class="portal-nav-item">
+            <a href="docente-devolutiva.html" class="portal-nav-item">
                 <span>💬</span> Devolutiva Individual
             </a>
-            <a href="#" class="portal-nav-item">
+            <a href="docente-autoavaliacao.html" class="portal-nav-item">
                 <span>📋</span> Autoavaliação
             </a>
         </aside>
 
         <!-- Conteúdo Principal -->
         <main class="portal-content">
-            <!-- Boas-vindas -->
-            <section class="portal-welcome">
-                <div class="portal-welcome-name">
-                    <span class="txt-desktop">Boas-vindas, Prof. Ricardo Santos!</span>
-                    <span class="txt-mobile">Prof. Ricardo Santos</span>
+            <!-- Perfil do Professor -->
+            <section class="box" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <div style="width: 54px; height: 54px; border-radius: 50%; background-color: var(--portal-color); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 1.2rem;">
+                        RS
+                    </div>
+                    <div>
+                        <h2 style="margin-bottom: 2px;">Prof. Ricardo Santos</h2>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">
+                            Componente: <strong>Biologia</strong> • Matrícula: <strong>DOC-202488</strong> • Ensino Médio Regular
+                        </p>
+                    </div>
                 </div>
-                <div class="portal-welcome-sub">
-                    <span class="txt-desktop">Turma Principal Selecionada: 3º Ano A - Matutino (25 Alunos)</span>
-                    <span class="txt-mobile">Turma: 3º Ano A - Matutino</span>
+
+                <div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start;">
+                    <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Turma Ativa Selecionada:</span>
+                    <select style="font-size: 0.85rem; font-weight: 600; padding: 6px 12px; width: auto;">
+                        <option selected>3º Ano A — Matutino (25 Alunos)</option>
+                        <option>3º Ano B — Matutino (28 Alunos)</option>
+                        <option>2º Ano A — Vespertino (30 Alunos)</option>
+                    </select>
                 </div>
             </section>
 
-            <!-- Cards de Ação -->
+            <!-- Faixa do Ciclo Letivo Atual -->
+            <section class="box" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 14px 20px;">
+                <div>
+                    <b style="color: var(--text-title); font-size: 0.95rem;">2º Trimestre Letivo · Observações Contínuas</b>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">Ciclo ativo até 28 de junho • 42 evidências coletadas na turma</p>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <span style="font-size: 0.75rem; font-weight: 600; background: var(--primary-green-light); color: var(--primary-green); padding: 4px 10px; border-radius: var(--radius-pill);">
+                        88% Cobertura da Turma
+                    </span>
+                    <span style="font-size: 0.75rem; font-weight: 600; background: #fef3c7; color: #92400e; padding: 4px 10px; border-radius: var(--radius-pill);">
+                        Conselho em 14 dias
+                    </span>
+                </div>
+            </section>
+
+            <!-- Cards de Ação para as Páginas Derivadas -->
             <section class="portal-grid">
                 <article class="portal-card border-green">
                     <div class="portal-card-header">
                         <h2>Registrar observações por aluno</h2>
                         <p class="portal-card-desc">
-                            <span class="txt-desktop">Lançar evidências comportamentais, engajamento ou pontos de
-                                atenção em aula.</span>
-                            <span class="txt-mobile">Lançar evidência individual de conduta</span>
+                            <span class="txt-desktop">Lançar evidências comportamentais em até 3 cliques durante a aula.</span>
+                            <span class="txt-mobile">Registro rápido em aula</span>
                         </p>
                     </div>
-                    <button class="btn btn-green">Nova Observação</button>
+                    <a href="docente-registro.html" class="btn btn-green">Nova Observação</a>
                 </article>
 
                 <article class="portal-card border-blue">
                     <div class="portal-card-header">
                         <h2>Consultar histórico de evidências</h2>
                         <p class="portal-card-desc">
-                            <span class="txt-desktop">Acessar a linha do tempo cronológica de observações e aplicar
-                                filtros por período.</span>
-                            <span class="txt-mobile">Visualizar registros do semestre</span>
+                            <span class="txt-desktop">Filtre por aluno, competência atitudinal ou linha cronológica.</span>
+                            <span class="txt-mobile">Histórico de observações</span>
                         </p>
                     </div>
-                    <button class="btn btn-blue">Ver Registros</button>
+                    <a href="docente-historico.html" class="btn btn-blue">Ver Registros</a>
                 </article>
 
                 <article class="portal-card border-purple">
                     <div class="portal-card-header">
                         <h2>Devolutiva Individual</h2>
                         <p class="portal-card-desc">
-                            <span class="txt-desktop">Elaborar pareceres pedagógicos e estabelecer metas alinhadas
-                                com cada discente.</span>
-                            <span class="txt-mobile">Enviar parecer direto ao aluno</span>
+                            <span class="txt-desktop">Cruzar anotações factuais e redigir o parecer socioemocional formativo.</span>
+                            <span class="txt-mobile">Parecer para o estudante</span>
                         </p>
                     </div>
-                    <button class="btn btn-purple">Elaborar Parecer</button>
+                    <a href="docente-devolutiva.html" class="btn btn-purple">Elaborar Parecer</a>
                 </article>
 
                 <article class="portal-card border-orange">
                     <div class="portal-card-header">
                         <h2>Aplicar Autoavaliação</h2>
                         <p class="portal-card-desc">
-                            <span class="txt-desktop">Liberar formulários e acompanhar a taxa de resposta atitudinal
-                                dos estudantes.</span>
-                            <span class="txt-mobile">Liberar questionário atitudinal</span>
+                            <span class="txt-desktop">Acompanhar a adesão e a percepção atitudinal dos estudantes da turma.</span>
+                            <span class="txt-mobile">Percepção dos estudantes</span>
                         </p>
                     </div>
-                    <button class="btn btn-orange">Gerenciar Envio</button>
+                    <a href="docente-autoavaliacao.html" class="btn btn-orange">Gerenciar Envio</a>
                 </article>
             </section>
         </main>

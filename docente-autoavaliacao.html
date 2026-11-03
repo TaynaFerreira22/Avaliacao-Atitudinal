@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Docente — Acompanhar Autoavaliação</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-docente">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="docente.html" class="btn-voltar">🠔</a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Acompanhamento de Autoavaliação</span>
+                <span class="txt-mobile">Autoavaliação</span>
+            </h1>
+            <span class="portal-user">Prof. Ricardo Santos (3º Ano A)</span>
+        </header>
+
+        <div class="portal-layout">
+            <!-- Navegação Lateral -->
+            <aside class="portal-sidebar">
+                <a href="docente.html" class="portal-nav-item">
+                    <span>🏠</span> Painel Principal
+                </a>
+                <a href="docente-registro.html" class="portal-nav-item">
+                    <span>📝</span> Registrar Obs.
+                </a>
+                <a href="docente-historico.html" class="portal-nav-item">
+                    <span>🔍</span> Consultar Histórico
+                </a>
+                <a href="docente-devolutiva.html" class="portal-nav-item">
+                    <span>💬</span> Devolutiva Individual
+                </a>
+                <a href="docente-autoavaliacao.html" class="portal-nav-item active">
+                    <span>📋</span> Autoavaliação
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <!-- Indicadores de Adesão da Turma -->
+                <section class="cols cols-3">
+                    <div class="box stat c-green">
+                        <small>Adesão da Turma</small>
+                        <strong>21 de 25 Alunos (84%)</strong>
+                    </div>
+                    <div class="box stat c-purple">
+                        <small>Ponto Forte Coletivo</small>
+                        <strong>Autonomia & Trabalho em Equipe</strong>
+                    </div>
+                    <div class="box stat c-orange">
+                        <small>Atenção Pedagógica</small>
+                        <strong>Gestão de Prazos</strong>
+                    </div>
+                </section>
+
+                <section class="cols cols-21">
+                    <!-- Lista de Alunos e Respostas -->
+                    <div class="box">
+                        <h2>Status de Envio por Aluno</h2>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Lucas Silva</b>
+                                <p>Reflexão concluída · Foco declarado em cumprimento de prazos.</p>
+                            </div>
+                            <time style="color: var(--primary-green); font-weight: 600;">✓ Concluído</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Beatriz Mendes</b>
+                                <p>Reflexão concluída · Foco declarado em liderança cooperativa.</p>
+                            </div>
+                            <time style="color: var(--primary-green); font-weight: 600;">✓ Concluído</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Gabriel Oliveira</b>
+                                <p>Questionário ainda não iniciado no ciclo ativo.</p>
+                            </div>
+                            <time style="color: #b91c1c; font-weight: 600;">⚠ Pendente</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Mariana Souza</b>
+                                <p>Rascunho salvo pelo aluno, aguardando submissão final.</p>
+                            </div>
+                            <time style="color: #d97706; font-weight: 600;">⚪ Em Rascunho</time>
+                        </div>
+                    </div>
+
+                    <!-- Gestão de Envios -->
+                    <aside class="box">
+                        <h2>Ações da Turma</h2>
+                        <div class="ctx">
+                            <p><strong>Ciclo 2: 2º Trimestre</strong></p>
+                            <p>Prazo limite estabelecido: 28 de junho.</p>
+                        </div>
+                        <button class="btn btn-orange btn-block" style="margin-bottom: 10px;">Lembrar Alunos Pendentes</button>
+                        <button class="btn btn-outline-blue btn-block">Exportar Resumo para o Conselho</button>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
