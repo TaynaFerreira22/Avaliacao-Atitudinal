@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Coordenação — Clima Escolar</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-coordenacao">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="coordenacao.html" class="btn-voltar">🠔</a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Clima Escolar & Intervenções</span>
+                <span class="txt-mobile">Clima Escolar</span>
+            </h1>
+            <span class="portal-user">Profa. Helena Ramos (Coordenação)</span>
+        </header>
+
+        <div class="portal-layout">
+           
+            <aside class="portal-sidebar">
+                <a href="coordenacao.html" class="portal-nav-item">
+                    <span>🏠</span> Painel Inicial
+                </a>
+                <a href="coordenacao-visao.html" class="portal-nav-item">
+                    <span>📊</span> Visão Geral da Escola
+                </a>
+                <a href="coordenacao-alerta.html" class="portal-nav-item">
+                    <span>⚠️</span> Sistema Alerta Precoce
+                </a>
+                <a href="coordenacao-clima.html" class="portal-nav-item active">
+                    <span>📈</span> Clima Escolar & Intervenções
+                </a>
+                <a href="coordenacao-atitudinal.html" class="portal-nav-item">
+                    <span>🧩</span> Dashboard Atitudinal
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <!-- Indicadores de Clima -->
+                <section class="cols cols-3">
+                    <div class="box stat c-green">
+                        <small>Índice de Bem-Estar</small>
+                        <strong>79% Positivo</strong>
+                    </div>
+                    <div class="box stat c-teal">
+                        <small>Intervenções em Curso</small>
+                        <strong>6 Rodas / Mediações</strong>
+                    </div>
+                    <div class="box stat c-blue">
+                        <small>Escutas Realizadas</small>
+                        <strong>24 Estudantes Ouvidos</strong>
+                    </div>
+                </section>
+
+                <section class="cols cols-21">
+                    <!-- Histórico de Intervenções Pedagógicas -->
+                    <div class="box">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                            <h2 style="margin: 0;">Ações Coletivas e Círculos Restaurativos</h2>
+                            <button class="btn btn-teal" style="padding: 5px 12px; font-size: 0.8rem;">+ Nova Intervenção</button>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Roda de Conversa sobre Cooperação · 3º Ano A</b>
+                                <p>"Mediação conduzida pelo SOE para repactuar acordos de divisão de tarefas em seminários."</p>
+                                <small style="color: var(--primary-green); font-weight: 600;">Impacto: Redução de atritos atestada pelos docentes</small>
+                            </div>
+                            <time>18/Junho</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Oficina de Gestão do Tempo e Autonomia · 1º Anos</b>
+                                <p>"Ação preparatória para apoiar estudantes recém-chegados ao Ensino Médio na organização de estudos."</p>
+                                <small style="color: #0f766e; font-weight: 600;">Ação Institucional Universal</small>
+                            </div>
+                            <time>10/Junho</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Revisão de Combinados de Convivência · 2º Ano B</b>
+                                <p>"Encontro com líderes de turma para alinhamento sobre o uso consciente de aparelhos celulares."</p>
+                                <small style="color: var(--primary-blue); font-weight: 600;">Participação Estudantil Ativa</small>
+                            </div>
+                            <time>04/Junho</time>
+                        </div>
+                    </div>
+
+                    <!-- Pilares do Bem-Estar Institucional -->
+                    <aside class="box">
+                        <h2>Pilares do Modelo</h2>
+                        <div class="ctx">
+                            <p><strong>Inspiração:</strong> Modelo finlandês de promoção de saúde escolar integral[cite: 6].</p>
+                            <p><strong>Foco:</strong> Avaliação que constrói ambiente saudável e não punição isolada de condutas[cite: 6].</p>
+                        </div>
+                        <button class="btn btn-outline-blue btn-block">Emitir Síntese para a Direção</button>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

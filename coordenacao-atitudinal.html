@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Coordenação — Dashboard Atitudinal</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-coordenacao">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="coordenacao.html" class="btn-voltar">🠔</a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Panorama Atitudinal Consolidado</span>
+                <span class="txt-mobile">Panorama Atitudinal</span>
+            </h1>
+            <span class="portal-user">Profa. Helena Ramos (Coordenação)</span>
+        </header>
+
+        <div class="portal-layout">
+           
+            <aside class="portal-sidebar">
+                <a href="coordenacao.html" class="portal-nav-item">
+                    <span>🏠</span> Painel Inicial
+                </a>
+                <a href="coordenacao-visao.html" class="portal-nav-item">
+                    <span>📊</span> Visão Geral da Escola
+                </a>
+                <a href="coordenacao-alerta.html" class="portal-nav-item">
+                    <span>⚠️</span> Sistema Alerta Precoce
+                </a>
+                <a href="coordenacao-clima.html" class="portal-nav-item">
+                    <span>📈</span> Clima Escolar & Intervenções
+                </a>
+                <a href="coordenacao-atitudinal.html" class="portal-nav-item active">
+                    <span>🧩</span> Dashboard Atitudinal
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <!-- Filtros da Visão Geral -->
+                <div class="filters" style="margin-bottom: 16px;">
+                    <select>
+                        <option>Segmento: Ensino Médio Regular & Integral</option>
+                        <option>Ensino Fundamental II</option>
+                    </select>
+                    <select>
+                        <option>Todas as Turmas</option>
+                        <option>3º Ano A</option>
+                        <option>1º Ano B</option>
+                    </select>
+                    <select>
+                        <option>2º Trimestre · 2025</option>
+                    </select>
+                </div>
+
+                <section class="cols cols-21">
+                    <!-- Matriz Dimensional BNCC / CASEL -->
+                    <div class="box">
+                        <h2>Médias por Competência Atitudinal Observada (BNCC / CASEL)</h2>
+
+                        <div class="skill c-teal" style="margin-top: 18px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                <span style="font-weight: 600; color: var(--text-title); font-size: 0.85rem;">Colaboração & Empatia</span>
+                                <b style="font-size: 0.85rem; color: #0f766e;">82%</b>
+                            </div>
+                            <div class="skill-bar"><div style="width: 82%; background-color: #0f766e;"></div></div>
+                        </div>
+
+                        <div class="skill c-blue" style="margin-top: 18px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                <span style="font-weight: 600; color: var(--text-title); font-size: 0.85rem;">Responsabilidade com Acordos e Prazos</span>
+                                <b style="font-size: 0.85rem; color: var(--primary-blue);">74%</b>
+                            </div>
+                            <div class="skill-bar"><div style="width: 74%; background-color: var(--primary-blue);"></div></div>
+                        </div>
+
+                        <div class="skill c-orange" style="margin-top: 18px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                <span style="font-weight: 600; color: var(--text-title); font-size: 0.85rem;">Autonomia & Autorregulação</span>
+                                <b style="font-size: 0.85rem; color: var(--color-orange);">68%</b>
+                            </div>
+                            <div class="skill-bar"><div style="width: 68%; background-color: var(--color-orange);"></div></div>
+                        </div>
+
+                        <div class="skill c-purple" style="margin-top: 18px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                <span style="font-weight: 600; color: var(--text-title); font-size: 0.85rem;">Comunicação & Argumentação Respeitosa</span>
+                                <b style="font-size: 0.85rem; color: var(--primary-purple);">77%</b>
+                            </div>
+                            <div class="skill-bar"><div style="width: 77%; background-color: var(--primary-purple);"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Alinhamento Pedagógico -->
+                    <aside class="box">
+                        <h2>Cruzamento com Autoavaliação</h2>
+                        <div class="ctx lilac">
+                            <p><strong>Convergência:</strong> 86% dos estudantes concordam com os pareceres docentes sobre a autonomia em projetos práticos.</p>
+                        </div>
+                        <div class="ctx">
+                            <p><strong>Ponto de Divergência:</strong> Turmas apontam sobrecarga de prazos simultâneos como causa de entregas em atraso.</p>
+                        </div>
+                        <button class="btn btn-teal btn-block">Descarregar Relatório Geral</button>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

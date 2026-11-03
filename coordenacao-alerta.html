@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Coordenação — Sistema Alerta Precoce</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-coordenacao">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="coordenacao.html" class="btn-voltar">🠔</a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Sistema de Alerta Precoce</span>
+                <span class="txt-mobile">Alertas Precoces</span>
+            </h1>
+            <span class="portal-user">Profa. Helena Ramos (Coordenação)</span>
+        </header>
+
+        <div class="portal-layout">
+          
+            <aside class="portal-sidebar">
+                <a href="coordenacao.html" class="portal-nav-item">
+                    <span>🏠</span> Painel Inicial
+                </a>
+                <a href="coordenacao-visao.html" class="portal-nav-item">
+                    <span>📊</span> Visão Geral da Escola
+                </a>
+                <a href="coordenacao-alerta.html" class="portal-nav-item active">
+                    <span>⚠️</span> Sistema Alerta Precoce
+                </a>
+                <a href="coordenacao-clima.html" class="portal-nav-item">
+                    <span>📈</span> Clima Escolar & Intervenções
+                </a>
+                <a href="coordenacao-atitudinal.html" class="portal-nav-item">
+                    <span>🧩</span> Dashboard Atitudinal
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <!-- Indicadores de Risco Formativo -->
+                <section class="cols cols-3">
+                    <div class="box stat c-orange">
+                        <small>Alertas Ativos</small>
+                        <strong>8 Casos em Triagem</strong>
+                    </div>
+                    <div class="box stat c-blue">
+                        <small>Intervenções com SOE</small>
+                        <strong>5 Estudantes Acompanhados</strong>
+                    </div>
+                    <div class="box stat c-green">
+                        <small>Recuperação de Padrão</small>
+                        <strong>11 Casos Resolvidos</strong>
+                    </div>
+                </section>
+
+                <section class="cols cols-21">
+                    <!-- Fila de Triagem / Casos Detectados -->
+                    <div class="box">
+                        <h2>Fila de Triagem Preventiva (Sem Rótulos Punitivos)</h2>
+
+                        <div class="filters" style="margin-bottom: 16px;">
+                            <select>
+                                <option>Todas as Turmas do Ensino Médio</option>
+                                <option>1º Ano B</option>
+                                <option>3º Ano A</option>
+                            </select>
+                            <select>
+                                <option>Prioridade: Todas</option>
+                                <option>Prioridade Alta</option>
+                                <option>Prioridade Média</option>
+                            </select>
+                        </div>
+
+                        <!-- Caso 1: Alta Prioridade -->
+                        <div class="feedback" style="border-left: 4px solid #ef4444; flex-direction: column; align-items: flex-start; gap: 8px;">
+                            <div style="display: flex; justify-content: space-between; width: 100%;">
+                                <b>1º Ano B · Gabriel Oliveira (Nº 08)</b>
+                                <time style="color: #991b1b; font-weight: 700;">Prioridade Alta</time>
+                            </div>
+                            <p style="margin: 0; color: var(--text-body);">
+                                Padrão cruzado: Queda de 40% em pontualidade associada a 3 ausências consecutivas no primeiro horário e anotações docentes de desengajamento[cite: 7].
+                            </p>
+                            <div style="display: flex; gap: 8px; width: 100%; margin-top: 6px;">
+                                <button class="btn btn-orange" style="padding: 4px 10px; font-size: 0.75rem;">Acionar Família e SOE</button>
+                                <button class="btn btn-outline-blue" style="padding: 4px 10px; font-size: 0.75rem;">Ver Histórico Completo</button>
+                            </div>
+                        </div>
+
+                        <!-- Caso 2: Média Prioridade -->
+                        <div class="feedback" style="border-left: 4px solid #f59e0b; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 12px;">
+                            <div style="display: flex; justify-content: space-between; width: 100%;">
+                                <b>3º Ano A · Dinâmica Coletiva da Turma</b>
+                                <time style="color: #92400e; font-weight: 700;">Prioridade Média</time>
+                            </div>
+                            <p style="margin: 0; color: var(--text-body);">
+                                Padrão cruzado: Aumento de registros de atrito na dimensão Colaboração durante tarefas em equipe em Biologia e Física.
+                            </p>
+                            <div style="display: flex; gap: 8px; width: 100%; margin-top: 6px;">
+                                <a href="coordenacao-clima.html" class="btn btn-blue" style="padding: 4px 10px; font-size: 0.75rem;">Agendar Roda Restaurativa</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Critérios do Modelo de Intervenção MTSS -->
+                    <aside class="box">
+                        <h2>Metodologia de Suporte</h2>
+                        <div class="ctx">
+                            <p><strong>Nível 1 (Universal):</strong> Ações de convivência em toda a escola[cite: 7].</p>
+                            <p><strong>Nível 2 (Focal):</strong> Monitoramento de pequenos grupos com atritos pontuais.</p>
+                            <p><strong>Nível 3 (Individualizado):</strong> Plano personalizado com a família e SOE[cite: 5].</p>
+                        </div>
+                        <button class="btn btn-teal btn-block">Exportar Casos para Conselho</button>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

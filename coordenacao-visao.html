@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Coordenação — Visão Geral</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-coordenacao">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="coordenacao.html" class="btn-voltar">🠔</a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Visão Geral da Escola</span>
+                <span class="txt-mobile">Visão Geral</span>
+            </h1>
+            <span class="portal-user">Profa. Helena Ramos (Coordenação)</span>
+        </header>
+
+        <div class="portal-layout">
+            
+            <aside class="portal-sidebar">
+                <a href="coordenacao.html" class="portal-nav-item">
+                    <span>🏠</span> Painel Inicial
+                </a>
+                <a href="coordenacao-visao.html" class="portal-nav-item active">
+                    <span>📊</span> Visão Geral da Escola
+                </a>
+                <a href="coordenacao-alerta.html" class="portal-nav-item">
+                    <span>⚠️</span> Sistema Alerta Precoce
+                </a>
+                <a href="coordenacao-clima.html" class="portal-nav-item">
+                    <span>📈</span> Clima Escolar & Intervenções
+                </a>
+                <a href="coordenacao-atitudinal.html" class="portal-nav-item">
+                    <span>🧩</span> Dashboard Atitudinal
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <!-- Indicadores Macropedagógicos -->
+                <section class="cols cols-3">
+                    <div class="box stat c-teal">
+                        <small>Aderência Docente ao Sistema</small>
+                        <strong>89% dos Professores</strong>
+                    </div>
+                    <div class="box stat c-green">
+                        <small>Total de Alunos Observados</small>
+                        <strong>395 de 420 Alunos</strong>
+                    </div>
+                    <div class="box stat c-blue">
+                        <small>Autoavaliações Realizadas</small>
+                        <strong>84% de Resposta</strong>
+                    </div>
+                </section>
+
+                <section class="cols cols-21">
+                    <!-- Status por Segmento e Turmas -->
+                    <div class="box">
+                        <h2>Consolidação por Série — 2º Trimestre</h2>
+                        
+                        <div class="feedback">
+                            <div>
+                                <b>1º Ano do Ensino Médio (Turmas A, B e C)</b>
+                                <p>135 alunos matriculados • 92 registros atitudinais • 3 alertas ativos</p>
+                            </div>
+                            <time style="color: var(--color-orange); font-weight: 600;">Em Acompanhamento</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>2º Ano do Ensino Médio (Turmas A e B)</b>
+                                <p>140 alunos matriculados • 110 registros atitudinais • 1 alerta ativo</p>
+                            </div>
+                            <time style="color: var(--primary-green); font-weight: 600;">Estável</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>3º Ano do Ensino Médio (Turmas A e B)</b>
+                                <p>145 alunos matriculados • 138 registros atitudinais • 4 alertas ativos</p>
+                            </div>
+                            <time style="color: var(--color-orange); font-weight: 600;">Conselho Próximo</time>
+                        </div>
+                    </div>
+
+                    <!-- Síntese Executiva -->
+                    <aside class="box">
+                        <h2>Ações Institucionais</h2>
+                        <div class="ctx">
+                            <p><strong>Ciclo Letivo Ativo:</strong> 2º Trimestre</p>
+                            <p>Fechamento das devolutivas e conselhos de classe agendados para os próximos 14 dias.</p>
+                        </div>
+                        <a href="coordenacao-atitudinal.html" class="btn btn-teal btn-block" style="margin-bottom: 8px;">Relatório Dimensional</a>
+                        <a href="coordenacao-alerta.html" class="btn btn-orange btn-block">Triagem de Alertas</a>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
