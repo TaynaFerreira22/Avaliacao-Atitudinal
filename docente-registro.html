@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Docente — Registrar Observação</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-docente">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="docente.html" class="btn-voltar">🠔</a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Registro de Evidências em Aula</span>
+                <span class="txt-mobile">Nova Observação</span>
+            </h1>
+            <span class="portal-user">Prof. Ricardo Santos (3º Ano A)</span>
+        </header>
+
+        <div class="portal-layout">
+            <!-- Navegação Lateral -->
+            <aside class="portal-sidebar">
+                <a href="docente.html" class="portal-nav-item">
+                    <span>🏠</span> Painel Principal
+                </a>
+                <a href="docente-registro.html" class="portal-nav-item active">
+                    <span>📝</span> Registrar Obs.
+                </a>
+                <a href="docente-historico.html" class="portal-nav-item">
+                    <span>🔍</span> Consultar Histórico
+                </a>
+                <a href="docente-devolutiva.html" class="portal-nav-item">
+                    <span>💬</span> Devolutiva Individual
+                </a>
+                <a href="docente-autoavaliacao.html" class="portal-nav-item">
+                    <span>📋</span> Autoavaliação
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <section class="box">
+                    <h2>Registo Rápido por Aluno (Mobile-First)</h2>
+
+                    <form action="docente-historico.html" method="GET">
+                        <!-- Seleção do Estudante e Contexto -->
+                        <div class="cols cols-21" style="margin-bottom: 16px;">
+                            <div class="q">
+                                <span>Estudante da Turma:</span>
+                                <select required>
+                                    <option value="">Selecione o estudante...</option>
+                                    <option selected>Lucas Silva (Nº 14)</option>
+                                    <option>Beatriz Mendes (Nº 03)</option>
+                                    <option>Gabriel Oliveira (Nº 08)</option>
+                                </select>
+                            </div>
+                            <div class="q">
+                                <span>Atividade / Momento:</span>
+                                <select>
+                                    <option>Atividade em Grupo</option>
+                                    <option>Seminário / Apresentação</option>
+                                    <option>Prática de Laboratório</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Natureza da Evidência -->
+                        <div class="q">
+                            <span>Natureza do Registo:</span>
+                            <div class="opts">
+                                <label><input type="radio" name="natureza" checked> 🟢 Ponto Forte / Evolução</label>
+                                <label><input type="radio" name="natureza"> ⚪ Observação Neutra</label>
+                                <label><input type="radio" name="natureza"> 🔴 Pede Mediação / Atenção</label>
+                            </div>
+                        </div>
+
+                        <!-- Rubricas em 3 cliques -->
+                        <div class="q">
+                            <span>1. Colaboração & Empatia:</span>
+                            <div class="opts">
+                                <label><input type="radio" name="c1"> 1 - Raramente</label>
+                                <label><input type="radio" name="c1"> 2 - Às vezes</label>
+                                <label><input type="radio" name="c1" checked> 3 - Frequente</label>
+                                <label><input type="radio" name="c1"> 4 - Consistente</label>
+                            </div>
+                        </div>
+
+                        <div class="q">
+                            <span>2. Responsabilidade com Prazos e Materiais:</span>
+                            <div class="opts">
+                                <label><input type="radio" name="c2"> 1 - Raramente</label>
+                                <label><input type="radio" name="c2"> 2 - Às vezes</label>
+                                <label><input type="radio" name="c2" checked> 3 - Frequente</label>
+                                <label><input type="radio" name="c2"> 4 - Consistente</label>
+                            </div>
+                        </div>
+
+                        <div class="q">
+                            <span>3. Autonomia e Iniciativa:</span>
+                            <div class="opts">
+                                <label><input type="radio" name="c3"> 1 - Raramente</label>
+                                <label><input type="radio" name="c3"> 2 - Às vezes</label>
+                                <label><input type="radio" name="c3"> 3 - Frequente</label>
+                                <label><input type="radio" name="c3" checked> 4 - Consistente</label>
+                            </div>
+                        </div>
+
+                        <div class="q">
+                            <span>Evidência Factual Observada (Opcional):</span>
+                            <textarea rows="3" placeholder="Ex.: Lucas assumiu a liderança na montagem do microscópio e auxiliou colegas com dúvidas."></textarea>
+                        </div>
+
+                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                            <button type="submit" class="btn btn-green">Salvar e Continuar Aula</button>
+                            <a href="docente.html" class="btn btn-voltar" style="border-radius: var(--radius-sm);">Cancelar</a>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

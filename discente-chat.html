@@ -19,7 +19,7 @@
             </a>
             <h1>
                 <span class="txt-desktop">🎓 DevWeb — Central de Diálogo & Autoavaliação</span>
-                <span class="txt-mobile">Central de Diálogo</span>
+                <span class="txt-mobile">Discutir Avaliação & Orientação</span>
             </h1>
         </header>
 
@@ -32,6 +32,9 @@
                 <a href="discente-autoavaliacao.html" class="portal-nav-item">
                     <span>✍️</span> Autoavaliação (Ciclos)
                 </a>
+		<a href="discente-historico.html" class="portal-nav-item">
+                    <span>📄</span> Histórico & Feedback
+                </a>
                 <a href="discente-chat.html" class="portal-nav-item active">
                     <span>💬</span> Discutir Avaliação
                 </a>
@@ -42,29 +45,40 @@
                 <section class="cols cols-chat">
                     <!-- Conversa -->
                     <div class="box chat">
-                        <h2>Chat com Prof. Ricardo Santos (Matemática)</h2>
+                        <h2 class="only-desktop">Chat com Prof. Ricardo Santos (Matemática)</h2>
+                        <div class="tabs only-mobile">
+                            <button class="tab active">Prof. Ricardo</button>
+                            <button class="tab">Coordenação</button>
+                        </div>
+                        <p class="topic only-mobile">📌 Tópico: Feedback de Matemática e Devolutiva</p>
                         <div class="chat-msgs">
                             <div class="msg">
                                 <b>Prof. Ricardo Santos</b>
-                                Olá Ana! Analisei sua autoavaliação sobre a prova de estatística.
+                                <span class="txt-desktop">Olá Ana! Analisei sua autoavaliação sobre a prova de estatística.</span>
+                                <span class="txt-mobile">Olá Ana! Vi sua autoavaliação. Vamos rever a questão 4 da prova de estatística?</span>
                             </div>
                             <div class="msg me">
                                 <b>Você (Ana Clara)</b>
-                                Professor, gostaria de entender melhor como calcular a ponderação.
+                                <span class="txt-desktop">Professor, gostaria de entender melhor como calcular a ponderação.</span>
+                                <span class="txt-mobile">Sim, professor! Tive dúvida no cálculo da média ponderada. Pode me explicar?</span>
                             </div>
                             <div class="msg">
                                 <b>Prof. Ricardo Santos</b>
-                                Perfeito! Agendei um plantão presencial amanhã às 14:00.
+                                <span class="txt-desktop">Perfeito! Agendei um plantão presencial amanhã às 14:00.</span>
+                                <span class="txt-mobile">Claro! Agendei um apoio presencial para amanhã às 14h no laboratório.</span>
                             </div>
                         </div>
                         <div class="chat-input">
                             <input type="text" placeholder="Escreva sua mensagem para o docente...">
-                            <button class="btn btn-purple">Enviar ➤</button>
+                            <button class="btn btn-purple">
+                                <span class="txt-desktop">Enviar ➤</span>
+                                <span class="txt-mobile">➤</span>
+                            </button>
                         </div>
                     </div>
 
                     <!-- Contexto -->
-                    <aside class="box">
+                    <aside class="box only-desktop">
                         <h2>Contexto da Avaliação</h2>
                         <div class="ctx">
                             <p><strong>Ciclo 2 — Prova Formativa</strong></p>

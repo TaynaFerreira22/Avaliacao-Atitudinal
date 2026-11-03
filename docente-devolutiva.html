@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Docente — Devolutiva Individual</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-docente">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="docente.html" class="btn-voltar">🠔</a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Devolutiva Individual Pedagógica</span>
+                <span class="txt-mobile">Devolutiva</span>
+            </h1>
+            <span class="portal-user">Prof. Ricardo Santos (3º Ano A)</span>
+        </header>
+
+        <div class="portal-layout">
+            <!-- Navegação Lateral -->
+            <aside class="portal-sidebar">
+                <a href="docente.html" class="portal-nav-item">
+                    <span>🏠</span> Painel Principal
+                </a>
+                <a href="docente-registro.html" class="portal-nav-item">
+                    <span>📝</span> Registrar Obs.
+                </a>
+                <a href="docente-historico.html" class="portal-nav-item">
+                    <span>🔍</span> Consultar Histórico
+                </a>
+                <a href="docente-devolutiva.html" class="portal-nav-item active">
+                    <span>💬</span> Devolutiva Individual
+                </a>
+                <a href="docente-autoavaliacao.html" class="portal-nav-item">
+                    <span>📋</span> Autoavaliação
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <section class="cols cols-21">
+                    <!-- Redação da Devolutiva -->
+                    <div class="box">
+                        <h2>Elaborar Parecer Formativo para o Aluno</h2>
+
+                        <div class="q">
+                            <span>Estudante Selecionado:</span>
+                            <select>
+                                <option selected>Lucas Silva (3º Ano A)</option>
+                                <option>Beatriz Mendes (3º Ano A)</option>
+                                <option>Gabriel Oliveira (3º Ano A)</option>
+                            </select>
+                        </div>
+
+                        <div class="q">
+                            <span>1. Reconhecimento dos Pontos Fortes:</span>
+                            <textarea rows="3">Lucas, sua autonomia e curiosidade investigativa nas aulas práticas foram destaques deste ciclo. Você apoia os colegas e busca soluções com proatividade.</textarea>
+                        </div>
+
+                        <div class="q">
+                            <span>2. Compromisso e Próximo Passo:</span>
+                            <textarea rows="3">Organizar o cronograma pessoal para manter a pontualidade na entrega dos relatórios escritos individuais.</textarea>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px;">
+                            <label style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+                                <input type="checkbox" checked style="accent-color: var(--primary-purple);"> Visível no Portal do Estudante
+                            </label>
+                            <a href="docente-historico.html" class="btn btn-purple">Publicar Devolutiva</a>
+                        </div>
+                    </div>
+
+                    <!-- Base de Evidências do Aluno -->
+                    <aside class="box">
+                        <h2>Evidências Coletadas no Ciclo</h2>
+                        <div class="ctx">
+                            <p><strong>Autonomia (Nível 4):</strong></p>
+                            <p>Montagem independente de práticas sem necessidade de intervenção prévia.</p>
+                        </div>
+                        <div class="ctx">
+                            <p><strong>Colaboração (Nível 3):</strong></p>
+                            <p>Participação ativa e apoio aos pares nas tarefas em grupo.</p>
+                        </div>
+                        <div class="ctx lilac">
+                            <p><strong>Autoavaliação do Aluno:</strong></p>
+                            <p>Lucas apontou a "Gestão de Tempo" como o seu principal foco de melhoria.</p>
+                        </div>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

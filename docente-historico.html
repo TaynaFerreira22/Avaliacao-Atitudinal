@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Docente — Histórico de Evidências</title>
+    <link rel="stylesheet" href="stylePortais.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body class="theme-docente">
+
+    <div class="portal-container">
+        <!-- Cabeçalho -->
+        <header class="portal-header">
+            <a href="docente.html" class="btn-voltar">🠔</a>
+            <h1>
+                <span class="txt-desktop">🎓 DevWeb — Histórico de Evidências</span>
+                <span class="txt-mobile">Histórico</span>
+            </h1>
+            <span class="portal-user">Prof. Ricardo Santos (3º Ano A)</span>
+        </header>
+
+        <div class="portal-layout">
+            <!-- Navegação Lateral -->
+            <aside class="portal-sidebar">
+                <a href="docente.html" class="portal-nav-item">
+                    <span>🏠</span> Painel Principal
+                </a>
+                <a href="docente-registro.html" class="portal-nav-item">
+                    <span>📝</span> Registrar Obs.
+                </a>
+                <a href="docente-historico.html" class="portal-nav-item active">
+                    <span>🔍</span> Consultar Histórico
+                </a>
+                <a href="docente-devolutiva.html" class="portal-nav-item">
+                    <span>💬</span> Devolutiva Individual
+                </a>
+                <a href="docente-autoavaliacao.html" class="portal-nav-item">
+                    <span>📋</span> Autoavaliação
+                </a>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="portal-content">
+                <!-- Indicadores Rápidos -->
+                <section class="cols cols-3">
+                    <div class="box stat c-green">
+                        <small>Total de Evidências no Ciclo</small>
+                        <strong>42 Registros</strong>
+                    </div>
+                    <div class="box stat c-blue">
+                        <small>Estudantes Cobertos</small>
+                        <strong>22 de 25 Alunos</strong>
+                    </div>
+                    <div class="box stat c-orange">
+                        <small>Casos com Mediação</small>
+                        <strong>3 Alertas Abertos</strong>
+                    </div>
+                </section>
+
+                <section class="cols cols-21">
+                    <!-- Linha do Tempo de Evidências -->
+                    <div class="box">
+                        <h2>Registros Cronológicos da Turma</h2>
+
+                        <div class="filters" style="margin-bottom: 16px;">
+                            <select>
+                                <option>Todos os Estudantes</option>
+                                <option>Lucas Silva</option>
+                                <option>Beatriz Mendes</option>
+                                <option>Gabriel Oliveira</option>
+                            </select>
+                            <select>
+                                <option>Todas as Dimensões</option>
+                                <option>Colaboração</option>
+                                <option>Responsabilidade</option>
+                                <option>Autonomia</option>
+                            </select>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Lucas Silva · Prática de Laboratório</b>
+                                <p>"Demonstrou grande autonomia na calibração do equipamento e auxiliou espontaneamente colegas."</p>
+                                <small style="color: var(--primary-green); font-weight: 600;">Autonomia (Nível 4)</small>
+                            </div>
+                            <time>Hoje, 14:10</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Beatriz Mendes · Seminário de Ecossistemas</b>
+                                <p>"Organizou a divisão de tempo com empatia, incentivando a fala de colegas tímidos."</p>
+                                <small style="color: var(--primary-blue); font-weight: 600;">Colaboração (Nível 4)</small>
+                            </div>
+                            <time>Ontem, 09:30</time>
+                        </div>
+
+                        <div class="feedback">
+                            <div>
+                                <b>Gabriel Oliveira · Trabalho em Grupo</b>
+                                <p>"Apresentou resistência aos combinados coletivos e não trouxe o material de campo."</p>
+                                <small style="color: #b91c1c; font-weight: 600;">Responsabilidade (Nível 1 - Atenção)</small>
+                            </div>
+                            <time>24/Maio</time>
+                        </div>
+                    </div>
+
+                    <!-- Resumo / Ações Rápidas -->
+                    <aside class="box">
+                        <h2>Curadoria Pedagógica</h2>
+                        <div class="ctx">
+                            <p><strong>Foco Atitudinal Atual:</strong></p>
+                            <p>Autonomia e responsabilidade na entrega de relatórios individuais de Biologia.</p>
+                        </div>
+                        <a href="docente-registro.html" class="btn btn-green btn-block">+ Novo Registro em Aula</a>
+                    </aside>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

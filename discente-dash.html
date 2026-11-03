@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styleHome.css">
 </head>
 
-<body class="theme-discente">
+<body class="theme-discente has-tabbar">
 
     <div class="portal-container">
         <!-- Cabeçalho -->
@@ -19,7 +19,7 @@
             </a>
             <h1>
                 <span class="txt-desktop">🎓 DevWeb — Portal do Discente</span>
-                <span class="txt-mobile">Portal do Discente</span>
+                <span class="txt-mobile">Dashboard Formativo</span>
             </h1>
             <span class="portal-user">Ana Clara Mendes (3º Ano A)</span>
         </header>
@@ -43,8 +43,51 @@
 
             <!-- Conteúdo Principal -->
             <main class="portal-content">
+                <!-- Mobile -->
+                <section class="portal-welcome only-mobile">
+                    <div class="portal-welcome-name">Ana Clara Mendes</div>
+                    <div class="portal-welcome-sub">3º Ano A • Progresso Geral: 84%</div>
+                </section>
+
+                <section class="box only-mobile">
+                    <h2>Evolução por Competência</h2>
+                    <div class="skill c-purple">
+                        <span>Autonomia & Gestão do Tempo</span>
+                        <div class="skill-row">
+                            <div class="skill-bar"><div style="width: 85%"></div></div>
+                            <em>85%</em>
+                        </div>
+                    </div>
+                    <div class="skill c-green">
+                        <span>Trabalho em Equipe & Empatia</span>
+                        <div class="skill-row">
+                            <div class="skill-bar"><div style="width: 92%"></div></div>
+                            <em>92%</em>
+                        </div>
+                    </div>
+                    <div class="skill c-blue">
+                        <span>Pensamento Crítico & Lógica</span>
+                        <div class="skill-row">
+                            <div class="skill-bar"><div style="width: 75%"></div></div>
+                            <em>75%</em>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="box only-mobile">
+                    <h2>Último Feedback de Matemática</h2>
+                    <p class="quote">"Ótima participação no projeto de estatística."</p>
+                    <small class="meta">Prof. Ricardo Santos • Há 2 dias</small>
+                </section>
+
+                <section class="box edge c-purple only-mobile">
+                    <h2>Nova Autoavaliação Disponível</h2>
+                    <a href="discente-autoavaliacao.html">Ciclo 2 - Apenas 3 min para responder →</a>
+                </section>
+
+                <!-- Desktop -->
                 <!-- Indicadores -->
-                <section class="cols cols-3">
+                <section class="cols cols-3 only-desktop">
                     <div class="box stat c-purple">
                         <small>Média Formativa Geral</small>
                         <strong>8.8 / 10</strong>
@@ -60,7 +103,7 @@
                 </section>
 
                 <!-- Gráfico e Competências -->
-                <section class="cols cols-21">
+                <section class="cols cols-21 only-desktop">
                     <div class="box chart">
                         <h2>Evolução Socioemocional e Acadêmica (Por Bimestre)</h2>
                         <svg viewBox="0 0 630 350">
@@ -104,7 +147,7 @@
                 </section>
 
                 <!-- Devolutivas -->
-                <section class="box">
+                <section class="box only-desktop">
                     <h2>Devolutivas Pedagógicas Recentes dos Professores</h2>
                     <div class="feedback">
                         <div>
@@ -124,6 +167,14 @@
                 </section>
             </main>
         </div>
+
+        <!-- Navegação inferior (Mobile) -->
+        <nav class="tabbar only-mobile">
+            <a href="discente-dash.html" class="active">Painel</a>
+            <a href="discente-historico.html">Evolução</a>
+            <a href="discente-chat.html">Chat</a>
+            <a href="#">Perfil</a>
+        </nav>
     </div>
 
 </body>
