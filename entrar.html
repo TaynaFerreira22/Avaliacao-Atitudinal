@@ -30,6 +30,18 @@
             outline: 2px solid var(--text-title);
             transform: translateX(4px);
         }
+
+        /* Oculta os botões específicos cujo portal NÃO está selecionado */
+        body:not(:has(#portal-docente:checked)) .btn-portal-docente,
+        body:not(:has(#portal-coordenacao:checked)) .btn-portal-coordenacao,
+        body:not(:has(#portal-discente:checked)) .btn-portal-discente {
+            display: none !important;
+        }
+
+        /* Oculta o botão predefinido assim que qualquer portal for selecionado */
+        body:has(input[name="portal"]:checked) .btn-portal-default {
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -64,7 +76,8 @@
 
                 <div class="portal-list">
                     <label class="portal-option docente">
-                        <input type="radio" name="portal" value="docente.html" form="form-login" required>
+                        <input type="radio" id="portal-docente" name="portal" value="docente.html" form="form-login"
+                            required>
                         <div class="portal-info">
                             <h4>Portal do Docente</h4>
                             <p>Acesso de professores, observações por aluno e registro de evidências.</p>
@@ -72,7 +85,8 @@
                     </label>
 
                     <label class="portal-option coordenacao">
-                        <input type="radio" name="portal" value="coordenacao.html" form="form-login" required>
+                        <input type="radio" id="portal-coordenacao" name="portal" value="coordenacao.html"
+                            form="form-login" required>
                         <div class="portal-info">
                             <h4>Portal da Coordenação</h4>
                             <p>Painel de clima escolar, gestão analítica e alertas precoces.</p>
@@ -80,15 +94,14 @@
                     </label>
 
                     <label class="portal-option discente">
-                        <input type="radio" name="portal" value="discente.html" form="form-login" required>
+                        <input type="radio" id="portal-discente" name="portal" value="discente.html" form="form-login"
+                            required>
                         <div class="portal-info">
                             <h4>Portal do Discente</h4>
                             <p>Autoavaliação formativa e progresso contínuo do aluno.</p>
                         </div>
                     </label>
                 </div>
-
-                <button type="submit" form="form-login" class="btn btn-green btn-block mobile-login-btn">Entrar</button>
             </section>
 
             <!-- Formulário de Credenciais -->
@@ -98,7 +111,7 @@
                     <p>Insira suas credenciais institucionais</p>
                 </div>
 
-                <form id="form-login" action="#" method="POST">
+                <form id="form-login" action="#" method="GET">
                     <div class="form-group">
                         <label for="identificador">E-mail Institucional ou CPF:</label>
                         <input type="text" id="identificador" name="identificador" placeholder="E-mail ou CPF..."
@@ -110,31 +123,36 @@
                         <input type="password" id="senha" name="senha" placeholder="Sua senha de acesso..." required>
                     </div>
 
-                    <button type="submit" class="btn btn-green btn-block desktop-login-btn">Autenticar e Entrar</button>
+                    <!-- Botões Mobile (exibidos após o preenchimento dos campos) -->
+                    <button type="submit"
+                        class="btn btn-green btn-block mobile-login-btn btn-portal-default">Entrar</button>
+                    <button type="submit" formmethod="GET" formaction="docente.html"
+                        class="btn btn-green btn-block mobile-login-btn btn-portal-docente">Entrar</button>
+                    <button type="submit" formmethod="GET" formaction="coordenacao.html"
+                        class="btn btn-green btn-block mobile-login-btn btn-portal-coordenacao">Entrar</button>
+                    <button type="submit" formmethod="GET" formaction="discente.html"
+                        class="btn btn-green btn-block mobile-login-btn btn-portal-discente">Entrar</button>
+
+                    <!-- Botões Desktop -->
+                    <button type="submit"
+                        class="btn btn-green btn-block desktop-login-btn btn-portal-default">Autenticar e
+                        Entrar</button>
+                    <button type="submit" formmethod="GET" formaction="docente.html"
+                        class="btn btn-green btn-block desktop-login-btn btn-portal-docente">Autenticar e
+                        Entrar</button>
+                    <button type="submit" formmethod="GET" formaction="coordenacao.html"
+                        class="btn btn-green btn-block desktop-login-btn btn-portal-coordenacao">Autenticar e
+                        Entrar</button>
+                    <button type="submit" formmethod="GET" formaction="discente.html"
+                        class="btn btn-green btn-block desktop-login-btn btn-portal-discente">Autenticar e
+                        Entrar</button>
 
                     <a href="#" class="forgot-link">Esqueceu sua senha? Clique aqui para recuperar</a>
                 </form>
             </section>
 
-
-
         </div>
     </main>
-
-    <!-- Script de roteamento após validação dos campos -->
-    <script>
-        document.getElementById("form-login").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            // Pega o portal selecionado
-            const portalSelecionado = document.querySelector('input[name="portal"]:checked');
-
-            if (portalSelecionado) {
-                // Redireciona para o arquivo HTML correspondente (docente.html, coordenacao.html ou discente.html)
-                window.location.href = portalSelecionado.value;
-            }
-        });
-    </script>
 
 </body>
 
