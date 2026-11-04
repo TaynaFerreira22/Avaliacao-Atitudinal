@@ -162,7 +162,7 @@ body.theme-discente .portal-nav-item.active {
   flex-direction: column;
   justify-content: space-between;
   min-height: 140px;
-  width: fit-content;
+  width: 100%;
   box-shadow: var(--shadow-sm);
   transition:
     transform 0.15s ease,
@@ -225,8 +225,9 @@ body.theme-discente .portal-nav-item.active {
   }
 
   .portal-container {
-    max-width: 480px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -235,6 +236,7 @@ body.theme-discente .portal-nav-item.active {
 
   .portal-header {
     padding: 18px 20px;
+    width: 100%;
   }
 
   /* Oculta o menu lateral no mobile conforme wireframe */
@@ -292,7 +294,7 @@ body.theme-discente .portal-nav-item.active {
     margin-bottom: 0;
     font-size: 0.8rem;
   }
-.portal-card .btn {
+  .portal-card .btn {
     display: inline-flex !important;
     width: 100%;
     margin-top: 12px;
@@ -314,10 +316,18 @@ body.theme-discente .portal-sidebar {
 }
 
 /* Cores utilitárias (alimentam a variável --c) */
-.c-purple { --c: var(--primary-purple); }
-.c-green { --c: var(--primary-green); }
-.c-blue { --c: var(--primary-blue); }
-.c-orange { --c: var(--color-orange); }
+.c-purple {
+  --c: var(--primary-purple);
+}
+.c-green {
+  --c: var(--primary-green);
+}
+.c-blue {
+  --c: var(--primary-blue);
+}
+.c-orange {
+  --c: var(--color-orange);
+}
 
 /* Grades de colunas */
 .cols {
@@ -326,9 +336,15 @@ body.theme-discente .portal-sidebar {
   grid-template-columns: var(--cols);
 }
 
-.cols-3 { --cols: repeat(3, 1fr); }
-.cols-21 { --cols: 2fr 1fr; }
-.cols-chat { --cols: 1.6fr 1fr; }
+.cols-3 {
+  --cols: repeat(3, 1fr);
+}
+.cols-21 {
+  --cols: 2fr 1fr;
+}
+.cols-chat {
+  --cols: 1.6fr 1fr;
+}
 
 /* Caixa genérica */
 .box {
@@ -685,33 +701,6 @@ textarea {
   .portal-layout {
     flex: 1;
     min-height: 0;
-  }
-
-  .has-tabbar .btn-voltar {
-    display: none;
-  }
-
-  .tabbar {
-    display: flex;
-    position: sticky;
-    bottom: 0;
-    background-color: var(--surface-card);
-    border-top: 1px solid var(--border-light);
-  }
-
-  .tabbar a {
-    flex: 1;
-    padding: 16px 0;
-    text-align: center;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    text-decoration: none;
-  }
-
-  .tabbar a.active {
-    color: var(--primary-purple);
-    font-weight: 700;
   }
 
   /* Chat */
