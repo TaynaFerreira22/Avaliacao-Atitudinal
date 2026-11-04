@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevWeb — Portal da Coordenação</title>
+    <title>Portal da Coordenação</title>
     <link rel="stylesheet" href="stylePortais.css">
     <link rel="stylesheet" href="styleHome.css">
 </head>
@@ -16,16 +16,18 @@
         <header class="portal-header">
             <a href="entrar.html" class="btn-voltar">🠔</a>
             <h1>
-                <span class="txt-desktop">🎓 DevWeb — Portal da Coordenação</span>
+                <span class="txt-desktop">Portal da Coordenação</span>
                 <span class="txt-mobile">Coordenação</span>
             </h1>
-            <span class="portal-user">Profa. Helena Ramos (Ensino Médio)</span>
         </header>
 
         <div class="portal-layout">
             <!-- Navegação Lateral -->
             <aside class="portal-sidebar">
                 <a href="coordenacao.html" class="portal-nav-item active">
+                    <span>🏠</span> Painel Inicial
+                </a>
+                <a href="coordenacao-visao.html" class="portal-nav-item">
                     <span>📊</span> Visão Geral da Escola
                 </a>
                 <a href="coordenacao-alerta.html" class="portal-nav-item">
@@ -41,46 +43,19 @@
 
             <!-- Conteúdo Principal -->
             <main class="portal-content">
-                <!-- Perfil da Coordenação / Segmento Ativo -->
-                <section class="box" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-                    <div style="display: flex; align-items: center; gap: 16px;">
-                        <div style="width: 54px; height: 54px; border-radius: 50%; background-color: var(--portal-color); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 1.2rem;">
-                            HR
-                        </div>
-                        <div>
-                            <h2 style="margin-bottom: 2px;">Profa. Helena Ramos</h2>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">
-                                Coordenação Pedagógica • Segmento: <strong>Ensino Médio Regular & Integral</strong> (420 Estudantes)
-                            </p>
-                        </div>
+                <!-- Perfil da Coordenação -->
+                <section class="portal-welcome">
+                    <div class="portal-welcome-name">
+                        <span class="txt-desktop">Boas-vindas, Profa. Helena Ramos!</span>
+                        <span class="txt-mobile">Profa. Helena Ramos</span>
                     </div>
-
-                    <div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start;">
-                        <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Período em Análise:</span>
-                        <select style="font-size: 0.85rem; font-weight: 600; padding: 6px 12px; width: auto;">
-                            <option selected>2º Trimestre Letivo (Ciclo Ativo)</option>
-                            <option>1º Trimestre Letivo (Consolidado)</option>
-                        </select>
+                    <div class="portal-welcome-sub">
+                        <span class="txt-desktop">Segmento: Ensino Médio Regular & Integral (Total: 420 Alunos)</span>
+                        <span class="txt-mobile">Coordenação Pedagógica • Ensino Médio</span>
                     </div>
                 </section>
 
-                <!-- Indicadores Globais do Segmento -->
-                <section class="cols cols-3">
-                    <div class="box stat c-teal">
-                        <small>Aderência do Corpo Docente</small>
-                        <strong>89% com Registros</strong>
-                    </div>
-                    <div class="box stat c-orange">
-                        <small>Alertas Atitudinais Abertos</small>
-                        <strong>8 Casos Prioritários</strong>
-                    </div>
-                    <div class="box stat c-green">
-                        <small>Índice de Clima Positivo</small>
-                        <strong>79% de Aprovação</strong>
-                    </div>
-                </section>
-
-                <!-- Cards de Ação para as Páginas Derivadas -->
+                <!-- Cards de Ação Corrigidos (Links diretos funcionais em Desktop e Mobile) -->
                 <section class="portal-grid">
                     <article class="portal-card border-teal">
                         <div class="portal-card-header">
@@ -90,7 +65,7 @@
                                 <span class="txt-mobile">Mapear panorama e assiduidade global</span>
                             </p>
                         </div>
-                        <a href="coordenacao-atitudinal.html" class="btn btn-teal">Acessar Visão Geral</a>
+                        <a href="coordenacao-visao.html" class="btn btn-teal">Acessar Visão Geral</a>
                     </article>
 
                     <article class="portal-card border-orange">

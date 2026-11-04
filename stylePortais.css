@@ -292,10 +292,11 @@ body.theme-discente .portal-nav-item.active {
     margin-bottom: 0;
     font-size: 0.8rem;
   }
-
-  /* Oculta os botões internos nos cards no mobile */
-  .portal-card .btn {
-    display: none;
+.portal-card .btn {
+    display: inline-flex !important;
+    width: 100%;
+    margin-top: 12px;
+    justify-content: center;
   }
 }
 
